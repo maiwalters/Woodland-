@@ -21,14 +21,30 @@
 
         <!-- Add your site or application content here -->
         <div id="home">
-            <div class="nav">
+            <div class="mynav">
+            <img class="logo" src="img/logo.png">
+                <ul class="mynav-ul">
+                    <li><a class="navlinkp" href="index.html">Home</a></li>
+                    <li><a class="navlinkp" href="projects.html">Our Work</a></li>
+                    <li><a class="navlinkp" href="#about">About Us</a></li>
+                    <li><a class="navlinkp" href="#">Testimonials</a></li>
+                    <li><a class="navlinkp" href="index.html#contact">Contact</a></li>
+                </ul>
             </div>
             
-            <div class="hero">
-                <div class="text">
-                </div>
-                <div id="name">
-                </div>
+            <form class="reviews" action="thispage.php" method="post" accept-charset="utf-8">
+                <fieldset><legend>Review This Product</legend>  
+                <p><label for="rating">Rating</label><input type="radio" name="rating"
+                 value="5" /> 5 <input type="radio" name="rating" value="4" /> 4
+                <input type="radio" name="rating" value="3" /> 3 <input type="radio"
+                name="rating" value="2" /> 2 <input type="radio" name="rating" value="1" /> 1</p>
+                <p><label for="review">Review</label><textarea name="review" rows="8" cols="40">
+                </textarea></p>
+                <p><input type="submit" value="Submit Review"></p>
+                <input type="hidden" name="product_type" value="actual_product_type" id="product_type">
+                <input type="hidden" name="product_id" value="actual_product_id" id="product_id">
+            </fieldset>
+            </form>
         </div>
 
  

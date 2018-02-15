@@ -1,10 +1,14 @@
 <?php
-$connection=mysqli_connect('localhost','root','','cms');
+$servername = "localhost";
+$username = ini_get("mysql.default_user") ;
+$password = ini_get("mysql.default_password") ;
 
-if(!$connection){
-	echo "Error: Unable to connect to MySQL." . PHP_EOL;
-	echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-	echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-	exit;
- }
- ?>
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+?>
